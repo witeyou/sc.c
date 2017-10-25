@@ -1,0 +1,27 @@
+#include<stdio.h>
+main()
+{
+	int a;
+	float b,c,x,y;/*x是交易成本 y是实际成交金额*/
+	printf("请输入交易的品种：（其中1为沪A股票；2为深A股票；3为基金）");
+	scanf("%d",&a);
+	printf("请输入交易的数量：");
+	scanf("%f",&b);
+	printf("请输入交易产品的单价：");
+	scanf("%f",&c);
+	switch(a)
+	{case 1:x=b*c*0.25/100+c/1000;
+		   if(x<10)
+				x=10;
+			y=b*c-x;break;
+	case 2:x=b*c*0.25/100;
+		   if(x<10)
+				x=10;
+			y=b*c-x;break;
+	case 3:x=b*c*0.12/1000;
+		   if(x<10)
+				x=10;
+		   y=b*c-x;break;
+	default:printf("数据输入错误");
+	}
+	printf()
